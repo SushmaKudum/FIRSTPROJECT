@@ -1,0 +1,108 @@
+.flexContainer{
+  display:flex; 
+  flex-direction: column; 
+}
+.flexMiddle{
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  align-content: center;
+}
+/* Large */
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  order:2;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-start;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .navigation {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+    order:2;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navigation {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+    order:2;
+  }
+}
+.header{  
+  background-color:#C2BFBF;  
+  flex:2;
+  order:1;  
+  height: 20%;
+  width: 100%;
+  text-align: center;
+}
+nav {
+  background-color: #2C64B4;  
+  height: 5vh; 
+  order:2;
+  width: 100%;
+  align-content: right;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+nav ul li {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  color: #FFF;
+  text-align: center;
+}
+.leftSideBar{
+  background-color:rgb(206, 12, 12);
+    flex:2;
+    order:1;
+    flex-direction: column;
+}
+.mainContent{
+  background-color:rgb(125, 145, 14);   
+    flex:2;
+    order:2;
+    flex-direction: column;
+  justify-content: space-around;
+    
+}
+.rightSideBar{ background-color:rgb(206, 12, 12); 
+  flex:2;
+  order:3;
+  width:20%;
+  flex-direction: column;}
+.footer{
+  clear:both;
+  background-color:#C2BFBF;
+  flex:1;
+  order:4;
+  text-align: center;}
+/* Medium screens */
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  .leftSideBar { flex: 1 auto; }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+  .main { flex: 2 0px; }
+}
