@@ -1,6 +1,6 @@
 .flexContainer{
   display:flex; 
-  flex-direction: column; 
+  flex-direction: column;
 }
 .flexMiddle{
   display:flex;
@@ -36,60 +36,63 @@
     order:2;
   }
 }
-.header{  
-  background-color:#C2BFBF;  
+.header{ 
   flex:2;
   order:1;  
-  height: 20%;
+  height:600px;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  background-repeat: no-repeat;
 }
-nav {
-  background-color: #2C64B4;  
+.img{  
+  background-image:url('../img/instituion.jpg');
+  background-size: 100%; 
+  background-repeat: no-repeat;
+}
+.nav {
   height: 5vh; 
   order:2;
   width: 100%;
-  align-content: right;
+  align-content: flex-start;
+  text-align:right;
 }
-nav ul {
+.nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-nav ul li {
+.nav ul li {
   margin: 0;
   padding: 0;
   float: left;
 }
-nav ul li a {
+.nav ul li a {
   text-decoration: none;
   padding: 10px 20px;
   display: block;
-  color: #FFF;
-  text-align: center;
+  color: rgb(206, 44, 44);
+  font-size: 22px;
+  text-align:start;
 }
 .leftSideBar{
-  background-color:rgb(206, 12, 12);
     flex:2;
     order:1;
     flex-direction: column;
 }
 .mainContent{
-  background-color:rgb(125, 145, 14);   
     flex:2;
     order:2;
     flex-direction: column;
   justify-content: space-around;
     
 }
-.rightSideBar{ background-color:rgb(206, 12, 12); 
+.rightSideBar{
   flex:2;
   order:3;
   width:20%;
   flex-direction: column;}
 .footer{
   clear:both;
-  background-color:#C2BFBF;
   flex:1;
   order:4;
   text-align: center;}
